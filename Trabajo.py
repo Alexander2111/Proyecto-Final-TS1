@@ -1,3 +1,5 @@
+import random
+
 print("Bienvenido a Chiquimateando")
 name = input("Hola,Cual es tu nombre : ")
 print("Hola",name) 
@@ -10,10 +12,12 @@ if 13 < edad :
 
 x = int(input("Hasta que número dominas : "))
 print("Esta bien",name,"procede a elejir un tema que quieras practicar")
-
-
-
-
+numeros = range(1,x)
+randomnumeros = random.randint(0,x)
+print("Que quieres practicar : pares/impares")
+respuesta = input ("")
+if  respuesta  == "pares" :
+    print("Estas jugando aprender pares")    
 
 
 
