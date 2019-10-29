@@ -2,6 +2,9 @@ import os
 os.system("cls")
 print("Recuerde:")
 print("Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.")
+print("Coloque Si , si desea seguir. ")
+print("Coloque No , si desea finalizar. ")
+
 a = 0
 while True:
     n = int(input("Ingrese numero primo:"))
