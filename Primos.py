@@ -9,13 +9,21 @@ print("Coloque No , si desea finalizar. ")
 a = 0
 while True:
     n = random.randint(1,100)
+    p = input("¿El numero "+ str(n) +" es primo?:").lower()
     for i in range (1,n+1):
         if (n % i == 0):
             a = a + 1
     if(a !=2):
-        print("Incorrecto. No es primo.")
+        if (p == "si"):
+            print("Incorrecto. No es primo.")
+        if (p == "no"):
+            print("Correcto.El numero no es primo")
     if (a==2):
-        print("Correcto. Si es primo.")
+        if (p == "si"):
+            print("Correcto. El numero si es primo.")
+        if (p == "no"):
+            print("Incorrecto.El numero si es primo")
+       
     ds = input("¿Desea seguir?:").lower()
     if (ds == "no"):
         break
