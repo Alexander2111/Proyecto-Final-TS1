@@ -20,6 +20,8 @@ etiqueta.pack()
 ventana.config (bg="#48C9B0")
 ttk.Button(ventana, text='Salir', command=ventana.destroy).pack(side=BOTTOM)
 
+
+
 #Interfaz Botones 
 
 
