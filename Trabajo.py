@@ -1,3 +1,4 @@
+#Importamos librerias 
 import random
 
 print("Bienvenido a Chiquimateando")
