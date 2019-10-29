@@ -15,12 +15,12 @@ while True:
         if (p == "si"):
             print("Correcto.El numero ingresado es impar")
         if(p == "no"):
-            print("Incorrecto.El numero ingrsado no es impar.")
+            print("Incorrecto.El numero ingresado si es impar.")
     if (n % 2 == 0):
         if (p == "si"):
             print("Incorrecto.El numero ingresado no es impar")
         if(p == "no"):
-            print("Correcto.El numero ingrsado es impar.")
+            print("Correcto.El numero ingrsado no es impar.")
     
         
     ds = input("¿Desea seguir?:").lower()
