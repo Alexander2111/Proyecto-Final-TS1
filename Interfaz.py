@@ -17,7 +17,6 @@ n = random.randint(1,100)
 nombre = StringVar()
 etiqueta1 = Label(ventana, text="Nombre del Jugador(a): ",bg="#48C9B0").place(x=40, y=30)
 nombre_etiqueta = Entry(ventana, textvariable=nombre).place(x=180, y=30)
-
 #Diseño de la Interfaz (Ventana 1)
 ventana.geometry('350x300')
 ventana.title(" CHIQUIMATEANDO")
@@ -26,12 +25,14 @@ etiqueta.pack()
 ventana.config (bg="#48C9B0")
 ttk.Button(ventana, text='Salir', command=ventana.destroy).pack(side=BOTTOM)
 
+
+
+##Pares
 ##Diseño de la Ventana
 ventana2.geometry('350x480')
 ventana2.title("Jugando Pares")
 etiqueta100 = Label(ventana2, text="pares",bg="#48C9B0")
 etiqueta.pack()
-##Pares
 #Ventana de pares 
 def abrir_ventana2():
     etiquetaPares1 = Label(ventana2, text=">>>>>>>> PARES <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
@@ -47,6 +48,11 @@ def sacar():
 
 ###Diseño de la Interfaz (Ventana 3 (Impares))
 ##Impares
+##Diseño de la Ventana
+ventana3.geometry('350x480')
+ventana3.title("Jugando Impares")
+etiqueta100 = Label(ventana2, text="pares",bg="#48C9B0")
+etiqueta.pack()
 #Ventana Impares 
 def abrir_ventana3():
     etiquetaIPares1 = Label(ventana3, text=">>>>>>>> PARES <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
@@ -60,6 +66,11 @@ def abrir_ventana3():
 
 ###Diseño de la Interfaz (Ventana 4 (Primos))
 ##Primos
+##Diseño de la Ventana
+ventana4.geometry('350x480')
+ventana4.title("Jugando Primos")
+etiqueta100 = Label(ventana2, text="pares",bg="#48C9B0")
+etiqueta.pack()
 # #Ventana Primos
 def abrir_ventana4():
     etiquetaPris1 = Label(ventana, text=">>>>>>>> PRIMOS <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
@@ -70,6 +81,11 @@ def abrir_ventana4():
 
 ###Diseño de la Interfaz (Ventana 5 (Multiplicar))
 ##Multiplicar
+##Diseño de la Ventana
+ventana5.geometry('350x480')
+ventana5.title("Jugando Multiplicar")
+etiqueta100 = Label(ventana2, text="pares",bg="#48C9B0")
+etiqueta.pack()
 #Ventana tabala de multiplicar
 def abrir_ventana5():
     etiqueta3 = Label(ventana, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
