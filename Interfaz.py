@@ -73,11 +73,11 @@ etiqueta100 = Label(ventana2, text="pares",bg="#48C9B0")
 etiqueta.pack()
 # #Ventana Primos
 def abrir_ventana4():
-    etiquetaPris1 = Label(ventana, text=">>>>>>>> PRIMOS <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
-    etiquetaPris2 = Label(ventana, text="Recuerde:",fg="blue",bg="#48C9B0").place(x=60, y=220)
-    etiquetaPris3 = Label(ventana, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="blue",bg="#48C9B0").place(x=60, y=240)
-    etiquetaPris4 = Label(ventana, text="Coloque Si,si desea seguir.",fg="blue",bg="#48C9B0").place(x=60, y=260)
-    etiquetaPris5 = Label(ventana, text="Coloque No,si desea acabar.",fg="blue",bg="#48C9B0").place(x=60, y=280)
+    etiquetaPris1 = Label(ventana4, text=">>>>>>>> PRIMOS <<<<<<<<",fg="blue",bg="#48C9B0").place(x=90, y=190)
+    etiquetaPris2 = Label(ventana4, text="Recuerde:",fg="blue",bg="#48C9B0").place(x=60, y=220)
+    etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="blue",bg="#48C9B0").place(x=60, y=240)
+    etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="blue",bg="#48C9B0").place(x=60, y=260)
+    etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="blue",bg="#48C9B0").place(x=60, y=280)
 
 ###Diseño de la Interfaz (Ventana 5 (Multiplicar))
 ##Multiplicar
