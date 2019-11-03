@@ -10,6 +10,7 @@ ventana2 = Tk()
 ventana3 = Tk()
 ventana4 = Tk()
 ventana5 = Tk()
+ventana6 = Tk()
 
 n = random.randint(1,100)
 
