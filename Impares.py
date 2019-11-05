@@ -29,7 +29,11 @@ while True:
             print("Formato no aceptado")
     
     ds = input("¿Desea seguir?:").lower()
-    if (ds == "no"):
+    if (ds == "si") :
+        print("Continue.")
+    elif (ds != "no"):
+        print("Formato no aceptado.Intentelo de nuevo.")
+    elif (ds == "no"):
         break
 
 

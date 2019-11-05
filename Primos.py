@@ -17,17 +17,29 @@ while True:
     if(a !=2):
         if (p == "si"):
             print("Incorrecto. No es primo.")
-        if (p == "no"):
+            print(n, "Tiene:",a,"divisiores")
+        elif (p == "no"):
             print("Correcto.El numero no es primo")
+            print(n, "Tiene:",a,"divisiores")
+        else:
+            print("Formato no aceptado")
     if (a == 2):
         if (p == "si"):
             print("Correcto. El numero si es primo.")
-        if (p == "no"):
+            print(n, "Tiene:",a,"divisiores")
+        elif (p == "no"):
             print("Incorrecto.El numero si es primo")
-    print(n, "Tiene:",a,"divisiores")
+            print(n, "Tiene:",a,"divisiores")
+        else:
+            print("Formato no aceptado")
+    
     a = a-a
        
     ds = input("¿Desea seguir?:").lower()
-    if (ds == "no"):
+    if (ds == "si") :
+        print("Continue.")
+    elif (ds != "no"):
+        print("Formato no aceptado.Intentelo de nuevo.")
+    elif (ds == "no"):
         break
 print("Juego Finalizado.") 		

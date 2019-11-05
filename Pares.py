@@ -19,7 +19,7 @@ while True:
             print("Incorrecto.El numero ingresado si es par.")
         else:
             print("Formato no aceptado")
-            
+
     if (n % 2 != 0):
         if (p == "si"):
             print("Incorrecto.El numero ingresado no es par")
@@ -29,5 +29,9 @@ while True:
             print("Formato no aceptado")
     
     ds = input("¿Desea seguir?:").lower()
-    if (ds == "no"):
+    if (ds == "si") :
+        print("Continue.")
+    elif (ds != "no"):
+        print("Formato no aceptado.Intentelo de nuevo.")
+    elif (ds == "no"):
         break
