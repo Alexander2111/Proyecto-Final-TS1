@@ -77,23 +77,23 @@ etiquetaprimos.pack()
 ventana4.config (bg="#1887BF")
 # #Ventana Primos
 def abrir_ventana4():
-    etiquetaPris1 = Label(ventana4, text=">>>>>>>> PRIMOS <<<<<<<<",fg="black",bg="#1887BF").place(x=90, y=190)
-    etiquetaPris2 = Label(ventana4, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=220)
-    etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="black",bg="#1887BF").place(x=60, y=240)
-    etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=260)
-    etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=280)
+    etiquetaPris1 = Label(ventana4, text=">>>>>>>> PRIMOS <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
+    etiquetaPris2 = Label(ventana4, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=70)
+    etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="black",bg="#1887BF").place(x=60, y=90)
+    etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
+    etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
 
 ###Diseño de la Interfaz (Ventana 5 (Multiplicar))
 ##Multiplicar
 ##Diseño de la Ventana
-ventana5.geometry('350x480')
+ventana5.geometry('700x250')
 ventana5.title("Jugando Multiplicar")
 etiquetamultiplicar = Label(ventana5, text="Multiplicar",bg="#1887BF")
 etiquetamultiplicar.pack()
 ventana5.config (bg="#1887BF")
 #Ventana tabala de multiplicar
 def abrir_ventana5():
-    etiqueta3 = Label(ventana5, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="black",bg="#1887BF").place(x=90, y=190)
+    etiqueta3 = Label(ventana5, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="black",bg="#1887BF").place(x=250, y=30)
 
 #Interfaz Botones 
 boton1 = Button(ventana, text="Pares",command=abrir_ventana2,activebackground="#369A8E").place(x=70, y=130)
