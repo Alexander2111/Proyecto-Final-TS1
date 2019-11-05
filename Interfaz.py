@@ -60,9 +60,9 @@ def abrir_ventana2():
 #Botones Pares 
         botonPA1 = Button(ventana2, text="Inicar Juego", command=pares,activebackground="blue").place(x=260, y=170)
     else :
-        messagebox.showinfo("Mensaje","Debe Registrar un jugador")
+        messagebox.showinfo("Mensaje","Debe Registrar un jugado")
          
-         
+
 #Definicion de Botones Pares
 def pares():
     etiquetaPares6 = Label(ventana2, text="este numero es par? ",fg="black",bg="#1887BF").place(x=60, y=200)
