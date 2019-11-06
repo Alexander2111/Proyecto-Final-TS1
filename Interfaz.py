@@ -33,7 +33,7 @@ def in_name():
     else :
         messagebox.showinfo("Mensaje","Ya añadio un Jugador")
     nombre.set("")
-
+    etiqueta12 = Label(ventana, text="bienvenido"+str(N),bg="#1887BF").place(x=40, y=110)
 
 
 ###Diseño de la Interfaz (Ventana 2 (Pares))
