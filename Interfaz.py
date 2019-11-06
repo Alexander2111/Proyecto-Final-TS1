@@ -47,11 +47,14 @@ def in_name():
 ventana2.geometry('700x450')
 ventana2.title("Jugando Pares")
 etiqueta100 = Label(ventana2, text="Pares",bg="#1887BF")
-etiqueta100.pack()
+etiqueta100.pack()  
 ventana2.config (bg="#1887BF")
 #Ventana de pares 
-def abrir_ventana2():
+def abrir_ventana2() :
     if int(len(N))==1 :
+        ventana2 = Toplevel(ventana)
+        ventana.iconify
+        ventana2.geometry('700x450')
         etiquetaPares1 = Label(ventana2, text=">>>>>>>> PARES <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
         etiquetaPares2 = Label(ventana2, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaPares3 = Label(ventana2, text="Un numero es par si se puede ser dividio entre 2",fg="black",bg="#1887BF").place(x=60, y=90)
@@ -61,13 +64,14 @@ def abrir_ventana2():
         botonPA1 = Button(ventana2, text="Inicar Juego", command=pares,activebackground="blue").place(x=260, y=170)
     else :
         messagebox.showinfo("Mensaje","Debe Registrar un jugado")
+
          
 
 #Definicion de Botones Pares
 def pares():
     etiquetaPares6 = Label(ventana2, text="este numero es par? ",fg="black",bg="#1887BF").place(x=60, y=200)
     etiquetapares7 = print(v)
-
+ 
 ###Diseño de la Interfaz (Ventana 3 (Impares))
 ##Impares
 ##Diseño de la Ventana
@@ -133,3 +137,4 @@ boton4 = Button(ventana, text="Tabla de multiplicar", command=abrir_ventana5,act
 boton5 = Button(ventana, text="Ingrese su nombre", command=in_name,activebackground="#369A8E").place(x=120, y=70)
 
 ventana.mainloop()
+ventana2.mainloop()
