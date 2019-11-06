@@ -1,4 +1,4 @@
-import os
+import os,sys
 import random
 os.system("cls")
 
@@ -10,28 +10,39 @@ print("Coloque No,si desea acabar.")
 
 while True:
     n = random.randint(1,100)
-    p = input("¿El numero "+ str(n) +" es par?:").lower()
 
-    if n % 2 == 0:
-        if (p == "si"):
-            print("Correcto.El numero ingresado es par")
-        elif(p == "no"):
-            print("Incorrecto.El numero ingresado si es par.")
-        else:
-            print("Formato no aceptado")
+    while True:
+        p = input("¿El numero "+ str(n) +" es par?:").lower()
+        if n % 2 == 0:
+            if (p == "si"):
+                print("Correcto.El numero ingresado es par")
+                break
+            elif(p == "no"):
+                print("Incorrecto.El numero ingresado si es par.")
+                break
+            else:
+                print("Formato no aceptado. Solo puede ingresar si o no.")
 
-    if (n % 2 != 0):
-        if (p == "si"):
-            print("Incorrecto.El numero ingresado no es par")
-        elif(p == "no"):
-            print("Correcto.El numero ingresado no es par.")
-        else:
-            print("Formato no aceptado")
-    
-    ds = input("¿Desea seguir?:").lower()
-    if (ds == "si") :
-        print("Continue.")
-    elif (ds != "no"):
-        print("Formato no aceptado.Intentelo de nuevo.")
-    elif (ds == "no"):
-        break
+        elif (n % 2 != 0):
+            if (p == "si"):
+                print("Incorrecto.El numero ingresado no es par")
+                break
+            elif(p == "no"):
+                print("Correcto.El numero ingresado no es par.")
+                break
+            else:
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+
+    while True:
+        ds = input("¿Desea seguir?:").lower()
+        if (ds == "si") :
+            print("Continue.")
+            break
+        elif (ds != "no"):
+            print("Formato no aceptado. Solo puede ingresar si o no.")
+        elif (ds == "no"):
+            print("Gracias por jugar pares.")
+            sys.exit()
+
+
+
