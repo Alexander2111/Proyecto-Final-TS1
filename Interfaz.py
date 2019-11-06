@@ -8,7 +8,6 @@ from tkinter import messagebox
 ventana = Tk()
 
 v = 12
-n = random.randint(1,100)
 
 #Interfaz 
 nombre = StringVar()
@@ -44,15 +43,25 @@ def in_name():
 def abrir_ventana2() :
     if int(len(N))==1 :
         #Definicion de Botones Pares
+        def nop():
+            n = random.randint(1,100)
+            if n % 2 != 0:
+                etiquetaPares10 = Label(ventana2, text="Incorrecto.El numero ingresado si es par",fg="black").place(x=300, y=300)
+            else:
+                etiquetaPares11 = Label(ventana2, text="Correcto.El numero ingresado no es par",fg="black").place(x=300, y=300)
+            
         def yesp():
-            if int(str(n)) % 2 == 0:
-                etiquetaPares8 = Label(ventana2, text="Estabien tilin",fg="black").place(x=300, y=300)
+            n = random.randint(1,100)
+            if n % 2 == 0:
+                etiquetaPares8 = Label(ventana2, text="Correcto.El numero ingresado es par",fg="black").place(x=300, y=300)
+            else : 
+                etiquetapares9 = Label(ventana2, text="Incorrecto.El numero ingresado no es par",fg="black").place(x=300, y=300)
         def pares():
             n = random.randint(1,100)
             etiquetaPares6 = Label(ventana2, text="Este numero es par? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaPares7 = Label(ventana2, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
             botonPA2 = Button(ventana2, text= "SI",command=yesp ,activebackground="blue").place(x=300, y=270)
-            botnPA3 = Button(ventana2, text="NO",activebackground="blue").place(x=360, y=270)
+            botnPA3 = Button(ventana2, text="NO",command=nop,activebackground="blue").place(x=360, y=270)
         #Abrir ventana
         ventana2 = Toplevel(ventana)
         ventana.iconify
