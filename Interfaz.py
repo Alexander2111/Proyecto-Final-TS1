@@ -124,6 +124,17 @@ def abrir_ventana3():
 ##Ventana Primos
 def abrir_ventana4():
     if int(len(N))==1 :
+        n = random.randint(1,100)
+        #Definiciones
+       # def nopri():
+
+        #def yespri():
+
+        def primos():
+            etiquetaPris6 = Label(ventana4, text="Este numero es primo? ",fg="black",bg="#1887BF").place(x=290, y=210)
+            etiquetaPriss7 = Label(ventana4, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
+            botonPRI2 = Button(ventana4, text= "SI",command=yespri ,activebackground="blue").place(x=300, y=270)
+            botonPRI3 = Button(ventana4, text="NO",command=nopri,activebackground="blue").place(x=360, y=270)
         #Abrir ventana
         ventana4 = Toplevel(ventana)
         ventana.iconify
@@ -139,6 +150,8 @@ def abrir_ventana4():
         etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
+        #BotonPrimos
+        botonPRI1 = Button(ventana4, text="Inicar Juego", command=primos,activebackground="blue").place(x=260, y=170)
     else :
         messagebox.showinfo("Mensaje","Debe Registrar un jugador")
 
