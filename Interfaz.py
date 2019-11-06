@@ -37,27 +37,23 @@ def in_name():
 
 
 ###Diseño de la Interfaz (Ventana 2 (Pares))
-#comando pares
-
 ##Ventana de pares 
 def abrir_ventana2() :
     if int(len(N))==1 :
+        n = random.randint(1,100)
         #Definicion de Botones Pares
         def nop():
-            n = random.randint(1,100)
             if n % 2 != 0:
-                etiquetaPares10 = Label(ventana2, text="Incorrecto.El numero ingresado si es par",fg="black").place(x=300, y=300)
+                etiquetaPares10 = Label(ventana2, text="Correcto.El numero ingresado no es par",fg="black",bg="#1887BF").place(x=250, y=310)
             else:
-                etiquetaPares11 = Label(ventana2, text="Correcto.El numero ingresado no es par",fg="black").place(x=300, y=300)
+                etiquetaPares11 = Label(ventana2, text="Incorrecto.El numero ingresado si es par",fg="black",bg="#1887BF").place(x=250, y=310)
             
-        def yesp():
-            n = random.randint(1,100)
+        def yesp():           
             if n % 2 == 0:
-                etiquetaPares8 = Label(ventana2, text="Correcto.El numero ingresado es par",fg="black").place(x=300, y=300)
+                etiquetaPares8 = Label(ventana2, text="Correcto.El numero ingresado es par",fg="black",bg="#1887BF").place(x=250, y=310)
             else : 
-                etiquetapares9 = Label(ventana2, text="Incorrecto.El numero ingresado no es par",fg="black").place(x=300, y=300)
+                etiquetapares9 = Label(ventana2, text="Incorrecto.El numero ingresado no es par",fg="black",bg="#1887BF").place(x=250, y=310)
         def pares():
-            n = random.randint(1,100)
             etiquetaPares6 = Label(ventana2, text="Este numero es par? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaPares7 = Label(ventana2, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
             botonPA2 = Button(ventana2, text= "SI",command=yesp ,activebackground="blue").place(x=300, y=270)
@@ -81,15 +77,29 @@ def abrir_ventana2() :
         botonPA1 = Button(ventana2, text="Inicar Juego", command=pares,activebackground="blue").place(x=260, y=170)
     else :
         messagebox.showinfo("Mensaje","Debe Registrar un jugado")
-
-         
-
-
+        
  
 ###Diseño de la Interfaz (Ventana 3 (Impares))
 #Ventana Impares 
 def abrir_ventana3():
     if int(len(N))==1 :
+        n = random.randint(1,100)
+        #Definicion Botones Impares :
+        def noip():
+            if n % 2 == 0:
+                etiquetaPares10 = Label(ventana3, text="Correcto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+            else:
+                etiquetaPares11 = Label(ventana3, text="Incorrecto.El numero ingresado si es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+        def yesip():
+            if n % 2 != 0:
+                etiquetaPares8 = Label(ventana3, text="Correcto.El numero ingresado es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+            else : 
+                etiquetapares9 = Label(ventana3, text="Incorrecto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+        def impares():
+            etiquetaIPares6 = Label(ventana3, text="Este numero es impar? ",fg="black",bg="#1887BF").place(x=290, y=210)
+            etiquetaIPares7 = Label(ventana3, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
+            botonIPA2 = Button(ventana3, text= "SI",command=yesip ,activebackground="blue").place(x=300, y=270)
+            botnIPA3 = Button(ventana3, text="NO",command=noip,activebackground="blue").place(x=360, y=270)
         #Abrir ventana
         ventana3 = Toplevel(ventana)
         ventana.iconify
@@ -109,7 +119,6 @@ def abrir_ventana3():
         botonIPA1 = Button(ventana3, text="Inicar Juego", command=impares,activebackground="blue").place(x=260, y=170)
     else :
         messagebox.showinfo("Mensaje","Debe Registrar un jugador")
-#Definicion de botones impares
 
 ###Diseño de la Interfaz (Ventana 4 (Primos))
 ##Ventana Primos
