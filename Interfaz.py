@@ -7,8 +7,6 @@ from tkinter import messagebox
 #Ventana
 ventana = Tk()
 
-v = 12
-
 #Interfaz 
 nombre = StringVar()
 etiqueta1 = Label(ventana, text="Nombre del Jugador(a): ",bg="#1887BF").place(x=40, y=30)
@@ -23,17 +21,16 @@ ttk.Button(ventana, text='Salir', command=ventana.destroy).pack(side=BOTTOM)
 
 ##NOmbre de Jugador
 N=[]
-nombre = StringVar()
 
 ##Ingreso nombre 
 def in_name():
     if N.count(nombre.get()) == 0:
         N.append(nombre.get())
-        messagebox.showinfo("Mensaje","Jugador Registrado Exitosamente")
+        messagebox.showinfo("Mensaje","Jugador Registrado Exitosamente")        
     else :
         messagebox.showinfo("Mensaje","Ya añadio un Jugador")
     nombre.set("")
-    etiqueta12 = Label(ventana, text="bienvenido"+str(N),bg="#1887BF").place(x=40, y=110)
+    etiqueta12 = Label(ventana, text="Bienvenido(a,e)"+str(N),bg="#1887BF").place(x=120, y=110)
 
 
 ###Diseño de la Interfaz (Ventana 2 (Pares))
