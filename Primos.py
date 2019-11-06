@@ -1,4 +1,4 @@
-import os
+import os,sys
 import random
 os.system("cls")
 print("Recuerde:")
@@ -9,37 +9,51 @@ print("Coloque No , si desea finalizar. ")
 a = 0
 while True:
     n = random.randint(2,100)
-    p = input("¿El numero "+ str(n) +" es primo?:").lower()
-    for i in range (1,n+1):
-        if (n % i == 0):
-            a = a + 1
+    while True:
+        p = input("¿El numero "+ str(n) +" es primo?:").lower()
+        for i in range (1,n+1):
+            if (n % i == 0):
+                a = a + 1
+        
     
-    if(a !=2):
-        if (p == "si"):
-            print("Incorrecto. No es primo.")
-            print(n, "Tiene:",a,"divisiores")
-        elif (p == "no"):
-            print("Correcto.El numero no es primo")
-            print(n, "Tiene:",a,"divisiores")
-        else:
-            print("Formato no aceptado")
-    if (a == 2):
-        if (p == "si"):
-            print("Correcto. El numero si es primo.")
-            print(n, "Tiene:",a,"divisiores")
-        elif (p == "no"):
-            print("Incorrecto.El numero si es primo")
-            print(n, "Tiene:",a,"divisiores")
-        else:
-            print("Formato no aceptado")
+        if(a !=2):
+            if (p == "si"):
+                print("Incorrecto. No es primo.")
+                print(n, "Tiene:",a,"divisiores")
+                a = a -a
+                break
+            elif (p == "no"):
+                print("Correcto.El numero no es primo")
+                print(n, "Tiene:",a,"divisiores")
+                a = a -a
+                break
+            else:
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+        if (a == 2):
+            if (p == "si"):
+                print("Correcto. El numero si es primo.")
+                print(n, "Tiene:",a,"divisiores")
+                a = a -a
+                break
+            elif (p == "no"):
+                print("Incorrecto.El numero si es primo")
+                print(n, "Tiene:",a,"divisiores")
+                a = a -a
+                break
+            else:
+                print("Formato no aceptado. Solo puede ingresar si o no.")
     
-    a = a-a
-       
-    ds = input("¿Desea seguir?:").lower()
-    if (ds == "si") :
-        print("Continue.")
-    elif (ds != "no"):
-        print("Formato no aceptado.Intentelo de nuevo.")
-    elif (ds == "no"):
-        break
-print("Juego Finalizado.") 		
+        
+
+   
+    while True:
+        ds = input("¿Desea seguir?:").lower()
+        if (ds == "si") :
+            print("Continue.")
+            break
+        elif (ds != "no"):
+            print("Formato no aceptado. Solo puede ingresar si o no.")
+        elif (ds == "no"):
+            print("Gracias por jugar primos")
+            sys.exit()
+   
