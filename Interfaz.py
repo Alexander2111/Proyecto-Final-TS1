@@ -9,7 +9,7 @@ ventana = Tk()
 
 #Interfaz 
 nombre = StringVar()
-etiqueta1 = Label(ventana, text="Nombre del Jugador(a): ",bg="#1887BF").place(x=40, y=30)
+etiqueta1 = Label(ventana, text="Nombre del Jugador(a,e): ",bg="#1887BF").place(x=40, y=30)
 nombre_etiqueta = Entry(ventana, textvariable=nombre).place(x=180, y=30)
 #Diseño de la Interfaz (Ventana 1)
 ventana.geometry('350x300')
