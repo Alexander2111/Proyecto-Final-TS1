@@ -30,7 +30,7 @@ def in_name():
     else :
         messagebox.showinfo("Mensaje","Ya añadio un Jugador")
     nombre.set("")
-    etiqueta12 = Label(ventana, text="Bienvenido(a,e)"+str(N),bg="#1887BF").place(x=120, y=110)
+    etiqueta12 = Label(ventana, text="Bienvenido(a,e)"+str(N),bg="#1887BF").place(x=110, y=110)
 
 
 ###Diseño de la Interfaz (Ventana 2 (Pares))
@@ -66,7 +66,7 @@ def abrir_ventana2() :
         ventana2.config (bg="#1887BF")
         #Etiquetas de la ventana
         etiquetaPares1 = Label(ventana2, text=">>>>>>>> PARES <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
-        etiquetaPares2 = Label(ventana2, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetaPares2 = Label(ventana2, text=str(N)+"Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaPares3 = Label(ventana2, text="Un numero es par si se puede ser dividio entre 2",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaPares4 = Label(ventana2, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaPares5 = Label(ventana2, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
