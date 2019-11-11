@@ -30,7 +30,7 @@ def in_name():
     else :
         messagebox.showinfo("Mensaje","Ya añadio un Jugador")
     nombre.set("")
-    etiqueta12 = Label(ventana, text="Bienvenido(a,e)"+str(N),bg="#1887BF").place(x=110, y=110)
+    etiqueta12 = Label(ventana, text="Bienvenido(a,e)"+"  "+str(N[0]),bg="#1887BF").place(x=100, y=110)
 
 
 ###Diseño de la Interfaz (Ventana 2 (Pares))
@@ -66,7 +66,7 @@ def abrir_ventana2() :
         ventana2.config (bg="#1887BF")
         #Etiquetas de la ventana
         etiquetaPares1 = Label(ventana2, text=">>>>>>>> PARES <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
-        etiquetaPares2 = Label(ventana2, text=str(N)+"Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetaPares2 = Label(ventana2, text=str(N[0])+", Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaPares3 = Label(ventana2, text="Un numero es par si se puede ser dividio entre 2",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaPares4 = Label(ventana2, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaPares5 = Label(ventana2, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
@@ -108,7 +108,7 @@ def abrir_ventana3():
         ventana3.config (bg="#1887BF")
         #Etiquetas de la ventana
         etiquetaIPares1 = Label(ventana3, text=">>>>>>>> IMPARES <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
-        etiquetaIPares2 = Label(ventana3, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetaIPares2 = Label(ventana3, text=str(N[0])+", Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaIPares3 = Label(ventana3, text="Un numero es impar si no puede ser dividio entre 2",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaIPares4 = Label(ventana3, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaIPares5 = Label(ventana3, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
@@ -117,13 +117,13 @@ def abrir_ventana3():
     else :
         messagebox.showinfo("Mensaje","Debe Registrar un jugador")
 
-###Diseño de la Interfaz (Ventana 4 (Primos))
+### Diseño de la Interfaz (Ventana 4 (Primos))
 ##Ventana Primos
 def abrir_ventana4():
     if int(len(N))==1 :
         n = random.randint(1,100)
         #Definiciones
-       # def nopri():
+        #def nopri():
 
         #def yespri():
 
@@ -143,7 +143,7 @@ def abrir_ventana4():
         ventana4.config (bg="#1887BF")
         #Etiquetas
         etiquetaPris1 = Label(ventana4, text=">>>>>>>> PRIMOS <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
-        etiquetaPris2 = Label(ventana4, text="Recuerde:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetaPris2 = Label(ventana4, text=str(N[0])+"Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
