@@ -9,12 +9,12 @@ ventana = Tk()
 
 #Interfaz 
 nombre = StringVar()
-etiqueta1 = Label(ventana, text="Nombre del Jugador(a): ",bg="#1887BF").place(x=40, y=30)
-nombre_etiqueta = Entry(ventana, textvariable=nombre).place(x=180, y=30)
+etiqueta1 = Label(ventana, text="Nombre del Jugador(a,e): ",bg="#1887BF").place(x=40, y=35)
+nombre_etiqueta = Entry(ventana, textvariable=nombre).place(x=180, y=35)
 #Diseño de la Interfaz (Ventana 1)
 ventana.geometry('350x300')
 ventana.title(" CHIQUIMATEANDO")
-etiqueta = Label(ventana, text="Bienvenidos a CHIQUIMATEANDO",bg="#1887BF")
+etiqueta = Label(ventana, text="Bienvenidos a CHIQUIMATEANDO",bg="#1887BF",font=("Arial Bold",15))
 etiqueta.pack()
 ventana.config (bg="#1887BF")
 ttk.Button(ventana, text='Salir', command=ventana.destroy).pack(side=BOTTOM)
@@ -26,7 +26,7 @@ N=[]
 def in_name():
     if N.count(nombre.get()) == 0:
         N.append(nombre.get())
-        messagebox.showinfo("Mensaje","Jugador Registrado Exitosamente")        
+        messagebox.showinfo("Mensaje","Jugador Registrado Exitosamente")     
     else :
         messagebox.showinfo("Mensaje","Ya añadio un Jugador")
     nombre.set("")
@@ -36,7 +36,7 @@ def in_name():
 ###Diseño de la Interfaz (Ventana 2 (Pares))
 ##Ventana de pares 
 def abrir_ventana2() :
-    if int(len(N))==1 :
+    if int(len(N))>=1 :
         n = random.randint(1,100)
         #Definicion de Botones Pares
         def nop():
@@ -73,13 +73,13 @@ def abrir_ventana2() :
         #Botones Pares 
         botonPA1 = Button(ventana2, text="Inicar Juego", command=pares,activebackground="blue").place(x=260, y=170)
     else :
-        messagebox.showinfo("Mensaje","Debe Registrar un jugado")
+        messagebox.showerror("Mensaje","Debe Registrar un jugado")
         
  
 ###Diseño de la Interfaz (Ventana 3 (Impares))
 #Ventana Impares 
 def abrir_ventana3():
-    if int(len(N))==1 :
+    if int(len(N))>=1 :
         n = random.randint(1,100)
         #Definicion Botones Impares :
         def noip():
@@ -115,12 +115,12 @@ def abrir_ventana3():
         #Botones Impares 
         botonIPA1 = Button(ventana3, text="Inicar Juego", command=impares,activebackground="blue").place(x=260, y=170)
     else :
-        messagebox.showinfo("Mensaje","Debe Registrar un jugador")
+        messagebox.showerror("Mensaje","Debe Registrar un jugador")
 
 ### Diseño de la Interfaz (Ventana 4 (Primos))
 ##Ventana Primos
 def abrir_ventana4():
-    if int(len(N))==1 :
+    if int(len(N))>=1 :
         n = random.randint(1,100)
         #Definiciones
         #def nopri():
@@ -143,20 +143,20 @@ def abrir_ventana4():
         ventana4.config (bg="#1887BF")
         #Etiquetas
         etiquetaPris1 = Label(ventana4, text=">>>>>>>> PRIMOS <<<<<<<<",fg="black",bg="#1887BF").place(x=265, y=30)
-        etiquetaPris2 = Label(ventana4, text=str(N[0])+"Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetaPris2 = Label(ventana4, text=str(N[0])+", Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
         etiquetaPris3 = Label(ventana4, text="Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)",fg="black",bg="#1887BF").place(x=60, y=90)
         etiquetaPris4 = Label(ventana4, text="Coloque Si,si desea seguir.",fg="black",bg="#1887BF").place(x=60, y=110)
         etiquetaPris5 = Label(ventana4, text="Coloque No,si desea acabar.",fg="black",bg="#1887BF").place(x=60, y=130)
         #BotonPrimos
         botonPRI1 = Button(ventana4, text="Inicar Juego", command=primos,activebackground="blue").place(x=260, y=170)
     else :
-        messagebox.showinfo("Mensaje","Debe Registrar un jugador")
+        messagebox.showerror("Mensaje","Debe Registrar un jugador")
 
 
 ###Diseño de la Interfaz (Ventana 5 (Multiplicar))
 #Ventana tabala de multiplicar
 def abrir_ventana5():
-    if int(len(N))==1 :
+    if int(len(N)) >= 1 :
         #Abrir ventana
         ventana5 = Toplevel(ventana)
         ventana.iconify
@@ -169,7 +169,7 @@ def abrir_ventana5():
         #Etiqueta
         etiqueta3 = Label(ventana5, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="black",bg="#1887BF").place(x=250, y=30)
     else : 
-        messagebox.showinfo("Mensaje","Debe Registrar un jugador")
+        messagebox.showerror("Mensaje","Debe Registrar un jugador")
 
 #Interfaz Botones 
 boton1 = Button(ventana, text="Pares",command=abrir_ventana2,activebackground="#369A8E").place(x=70, y=190)
