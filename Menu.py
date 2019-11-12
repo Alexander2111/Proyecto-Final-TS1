@@ -17,7 +17,8 @@ def pedirNumeroEntero():
 salir = False
 opcion = 0
  
-while not salir:
+while True :
+
  
     print("Bienvenidos a Chiquimatiando")
     print ("1. Pares")
@@ -27,60 +28,97 @@ while not salir:
     print ("5. Fin de la aplicacion")
      
     print ("Elige una opcion")
+    opcion = int(input("Ingrese una opcion para jugar:"))
  
-    opcion = pedirNumeroEntero()
+    
  
     if opcion == 1:
         print("Recuerde:")
         print("Un numero es par si se puede ser dividio entre 2.")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
-
-
         while True:
-            n = random.randint(1,100)
-            p = input("¿El numero "+ str(n) +" es par?:").lower()
-            if n % 2 == 0:
-                if (p == "si"):
-                    print("Correcto.El numero ingresado es par")
-                if(p == "no"):
-                    print("Incorrecto.El numero ingresado es par.")
-            if (n % 2 != 0):
-                if (p == "si"):
-                    print("Incorrecto.El numero ingresado es impar")
-                if(p == "no"):
-                    print("Correcto.El numero ingresado es par.")
+            n = random.randint(1,100)    
+            while True:
+                p = input("¿El numero "+ str(n) +" es par?:").lower()
+                if n % 2 == 0:
+                    if (p == "si"):
+                        print("Correcto.El numero ingresado es par")
+                        break
+                    elif(p == "no"):
+                        print("Incorrecto.El numero ingresado si es par.")
+                        break
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
+
+                elif (n % 2 != 0):
+                    if (p == "si"):
+                        print("Incorrecto.El numero ingresado no es par")
+                        break
+                    elif(p == "no"):
+                        print("Correcto.El numero ingresado no es par.")
+                        break
+                else:
+                    print("Formato no aceptado. Solo puede ingresar si o no.")
             
-                
+            
             ds = input("¿Desea seguir?:").lower()
-            if (ds == "no"):
+            if (ds == "si") :
+                print("Continue.")
+                
+            if (ds != "no"):
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+            elif (ds == "no"):
+                print("Gracias por jugar pares.")
                 break
-       
+            
+
+
     elif opcion == 2:
         print("Recuerde:")
         print("Un numero es impar si no puede ser dividio entre 2.")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
-
-
         while True:
             n = random.randint(1,100)
-            p = input("¿El numero "+ str(n) +" es impar?:").lower()
-            if n % 2 != 0:
-                if (p == "si"):
-                    print("Correcto.El numero ingresado es impar")
-                if(p == "no"):
-                    print("Incorrecto.El numero ingresado si es impar.")
-            if (n % 2 == 0):
-                if (p == "si"):
-                    print("Incorrecto.El numero ingresado no es impar")
-                if(p == "no"):
-                    print("Correcto.El numero ingresado no es impar.")
+
+            while True:
+                p = input("¿El numero "+ str(n) +" es impar?:").lower()
+                if n % 2 != 0:
+                    if (p == "si"):
+                        print("Correcto.El numero ingresado es impar")
+                        break
+                    elif(p == "no"):
+                        print("Incorrecto.El numero ingresado si es impar.")
+                        break
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
             
-                
+                elif (n % 2 == 0):
+                    if (p == "si"):
+                        print("Incorrecto.El numero ingresado no es impar")
+                        break
+                    elif(p == "no"):
+                        print("Correcto.El numero ingresado no es impar.")
+                        break
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
+            
+            
             ds = input("¿Desea seguir?:").lower()
-            if (ds == "no"):
-                break    
+            if (ds == "si") :
+                print("Continue.")
+                
+            elif (ds != "no"):
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+            elif (ds == "no"):
+                print("Gracias por jugar impares.")
+                break
+        
+
+
+
+
 
     elif opcion == 3:
         print("Recuerde:")
@@ -90,28 +128,56 @@ while not salir:
 
         a = 0
         while True:
+
             n = random.randint(2,100)
-            p = input("¿El numero "+ str(n) +" es primo?:").lower()
-            for i in range (1,n+1):
-                if (n % i == 0):
-                    a = a + 1
+            while True:
+                p = input("¿El numero "+ str(n) +" es primo?:").lower()
+                for i in range (1,n+1):
+                    if (n % i == 0):
+                        a = a + 1
             
-            if(a !=2):
-                if (p == "si"):
-                    print("Incorrecto. No es primo.")
-                if (p == "no"):
-                    print("Correcto.El numero no es primo")
-            if (a == 2):
-                if (p == "si"):
-                    print("Correcto. El numero si es primo.")
-                if (p == "no"):
-                    print("Incorrecto.El numero si es primo")
-            print(n, "Tiene:",a,"divisiores")
-            a = a-a
+    
+                if(a !=2):
+                    if (p == "si"):
+                        print("Incorrecto. No es primo.")
+                        print(n, "Tiene:",a,"divisiores")
+                        a = a -a
+                        break
+                    elif (p == "no"):
+                        print("Correcto.El numero no es primo")
+                        print(n, "Tiene:",a,"divisiores")
+                        a = a -a
+                        break
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
+                if (a == 2):
+                    if (p == "si"):
+                        print("Correcto. El numero si es primo.")
+                        print(n, "Tiene:",a,"divisiores")
+                        a = a -a
+                        break
+                    elif (p == "no"):
+                        print("Incorrecto.El numero si es primo")
+                        print(n, "Tiene:",a,"divisiores")
+                        a = a -a
+                        break
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
+        
+            
+
+    
             
             ds = input("¿Desea seguir?:").lower()
-            if (ds == "no"):
+            if (ds == "si") :
+                print("Continue.")
+                
+            elif (ds != "no"):
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+            elif (ds == "no"):
+                print("Gracias por jugar primos")
                 break
+            
 
 
     elif opcion == 4:
