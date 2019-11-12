@@ -121,12 +121,27 @@ def abrir_ventana3():
 ##Ventana Primos
 def abrir_ventana4():
     if int(len(N))>=1 :
+        a = 0
         n = random.randint(1,100)
+        for i in range (1,n+1):
+            if (n % i == 0):
+                a = a + 1
         #Definiciones
-        #def nopri():
-
-        #def yespri():
-
+        def nopri():
+            if(a !=2):
+                etiquetaPris10 = Label(ventana4, text="Correcto.El numero no es primo",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPris15 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+            else :
+                etiquetaPris11 = Label(ventana4, text="Incorrecto.El numero si es primo",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPris14 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+        def yespri():
+            if (a == 2):
+                etiquetaPris8 = Label(ventana4, text="Correcto. El numero si es primo.",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPris12 = Label(ventana4, text=str(n)+"Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+                print(n, "Tiene:",a,"divisiores")
+            else :
+                etiquetaPris9 = Label(ventana4, text="Incorrecto. No es primo.",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPris13 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=250, y=330)
         def primos():
             etiquetaPris6 = Label(ventana4, text="Este numero es primo? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaPriss7 = Label(ventana4, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
@@ -157,6 +172,22 @@ def abrir_ventana4():
 #Ventana tabala de multiplicar
 def abrir_ventana5():
     if int(len(N)) >= 1 :
+        #Definición de Botones de Multipicar
+        MU = []
+        def multi() :
+            MU.append(mul.get())
+            e1 = Label (ventana5, text= str(MU[0])+" X  1  = "+  str(MU[0]),bg="#1887BF" ).place(x=280, y=190)
+            e2 = Label (ventana5, text= str(MU[0])+" X  2  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=210)
+            e3 = Label (ventana5, text= str(MU[0])+" X  3  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=230)
+            e4 = Label (ventana5, text= str(MU[0])+" X  4  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=250)
+            e5 = Label (ventana5, text= str(MU[0])+" X  5  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=270)
+            e6 = Label (ventana5, text= str(MU[0])+" X  6  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=290)
+            e7 = Label (ventana5, text= str(MU[0])+" X  7  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=310)
+            e8 = Label (ventana5, text= str(MU[0])+" X  8  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=330)
+            e9 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=350)
+            e10 = Label (ventana5, text= str(MU[0])+" X  10  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=370)
+            e11 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=390)
+            e12 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=410)
         #Abrir ventana
         ventana5 = Toplevel(ventana)
         ventana.iconify
@@ -167,7 +198,14 @@ def abrir_ventana5():
         etiquetamultiplicar.pack()
         ventana5.config (bg="#1887BF")
         #Etiqueta
-        etiqueta3 = Label(ventana5, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="black",bg="#1887BF").place(x=250, y=30)
+        mul = StringVar()
+        etiquetamult3 = Label(ventana5, text=">>>>>>>> MULTIPLICAR <<<<<<<<",fg="black",bg="#1887BF").place(x=250, y=30)
+        etiquetamult4 = Label(ventana5, text=str(N[0])+", Recuerda:",fg="black",bg="#1887BF").place(x=60, y=70)
+        etiquetamult5 = Label(ventana5, text="Se le mostrara la tabla de multiplicar del 1 al 12 del número que ingrese ",fg="black",bg="#1887BF").place(x=60, y=90)
+        etiquetamult6 = Label(ventana5, text="Ingrese número : ",bg="#1887BF").place(x=190, y=125)
+        nu = Entry(ventana5, textvariable = mul).place(x=300, y=125)
+        #Botones
+        BotonMult = Button(ventana5, text="Mostrar tabla",command=multi,activebackground="blue").place(x=280, y=160)
     else : 
         messagebox.showerror("Mensaje","Debe Registrar un jugador")
 
