@@ -108,21 +108,21 @@ def abrir_ventana3():
         def noip():
             if n % 2 == 0:
                 etiquetaPares10 = Label(ventana3, text="Correcto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
-                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
-                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
+                BotonIPAFSI = Button(ventana3, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
             else:
                 etiquetaPares11 = Label(ventana3, text="Incorrecto.El numero ingresado si es impar",fg="black",bg="#1887BF").place(x=250, y=310)
-                BotonIPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
-                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
+                BotonIPAFSI = Button(ventana3, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
         def yesip():
             if n % 2 != 0:
                 etiquetaPares8 = Label(ventana3, text="Correcto.El numero ingresado es impar",fg="black",bg="#1887BF").place(x=250, y=310)
-                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
-                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
+                BotonIPAFSI = Button(ventana3, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
             else : 
                 etiquetapares9 = Label(ventana3, text="Incorrecto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
-                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
-                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
+                BotonIPAFSI = Button(ventana3, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
         def impares():
             etiquetaIPares6 = Label(ventana3, text="Este numero es impar? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaIPares7 = Label(ventana3, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)

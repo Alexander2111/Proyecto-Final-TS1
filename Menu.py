@@ -90,6 +90,7 @@ while True :
             
             elif (ds == "no"):
                 print("Gracias por jugar pares.")
+                print("")
                 break
             con = ""
             while (ds != "no"and ds!="si") :
@@ -105,6 +106,7 @@ while True :
             
             elif (con == "no"):
                 print("Gracias por jugar pares.")
+                print("")
                 break
           
             
@@ -148,7 +150,8 @@ while True :
                 print("Continue.")
             
             elif (ds == "no"):
-                print("Gracias por jugar pares.")
+                print("Gracias por jugar impares.")
+                print("")
                 break
             con = ""
             while (ds != "no"and ds!="si") :
@@ -163,7 +166,8 @@ while True :
                 print("Continue.")
             
             elif (con == "no"):
-                print("Gracias por jugar pares.")
+                print("Gracias por jugar impares.")
+                print("")
                 break
         
 
@@ -226,7 +230,8 @@ while True :
                 print("Continue.")
             
             elif (ds == "no"):
-                print("Gracias por jugar pares.")
+                print("Gracias por jugar primos.")
+                print("")
                 break
             con = ""
             while (ds != "no"and ds!="si") :
@@ -241,7 +246,8 @@ while True :
                 print("Continue.")
             
             elif (con == "no"):
-                print("Gracias por jugar pares.")
+                print("Gracias por jugar primos.")
+                print("")
                 break
             
 
