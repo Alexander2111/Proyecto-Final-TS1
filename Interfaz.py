@@ -112,7 +112,7 @@ def abrir_ventana3():
                 BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
             else:
                 etiquetaPares11 = Label(ventana3, text="Incorrecto.El numero ingresado si es impar",fg="black",bg="#1887BF").place(x=250, y=310)
-                BotonIPAFSI = Button(ventana3, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFSI = Button(ventana3, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
                 BotonIPAFNO = Button(ventana3, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
         def yesip():
             if n % 2 != 0:
