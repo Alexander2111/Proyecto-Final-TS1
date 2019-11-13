@@ -16,6 +16,8 @@ def pedirNumeroEntero():
  
 salir = False
 
+
+
 # Entrada:ingresar la edad
 
 print("Hola. Solo puedes jugar si tienes la edad de 8 a 13.")
@@ -33,6 +35,9 @@ while True:
         break
     except ValueError:
         print("Formato no aceptado.Intentelo de nuevo")
+
+nombre = input("Ingrese nombre por favor: ")
+print("Hola ",nombre)
 
 
 
