@@ -99,7 +99,7 @@ while True :
                     else:
                         print("Formato no aceptado. Solo puede ingresar si o no.")
 
-                elif (n % 2 != 0):
+                else :
                     if (p == "si"):
                         print("Incorrecto.El numero ingresado no es par")
                         break
@@ -161,7 +161,7 @@ while True :
                     else:
                         print("Formato no aceptado. Solo puede ingresar si o no.")
             
-                elif (n % 2 == 0):
+                else:
                     if (p == "si"):
                         print("Incorrecto.El numero ingresado no es impar")
                         break
@@ -235,7 +235,7 @@ while True :
                         break
                     else:
                         print("Formato no aceptado. Solo puede ingresar si o no.")
-                if (a == 2):
+                else:
                     if (p == "si"):
                         print("Correcto. El numero si es primo.")
                         print(n, "Tiene:",a,"divisiores")
