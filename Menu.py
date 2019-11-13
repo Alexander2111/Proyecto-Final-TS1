@@ -93,8 +93,8 @@ while True :
                     elif(p == "no"):
                         print("Correcto.El numero ingresado no es par.")
                         break
-                else:
-                    print("Formato no aceptado. Solo puede ingresar si o no.")
+                    else:
+                        print("Formato no aceptado. Solo puede ingresar si o no.")
             
             
             ds = input("¿Desea seguir?:").lower()
