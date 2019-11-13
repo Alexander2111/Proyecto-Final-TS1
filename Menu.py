@@ -143,7 +143,7 @@ while True :
         print("")
         print("*****JUGANDO IMPARES*****")
         print("Recuerde:")
-        print("Un numero es impar si no puede ser dividio entre 2 .")
+        print("Un numero es impar si dividido entre dos no da un numero entero.")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
         while True:
