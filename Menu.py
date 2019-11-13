@@ -82,7 +82,7 @@ while True :
         print("")
         print("*****JUGANDO PARES******")
         print("Recuerde :")
-        print("Un numero es par si se puede ser dividio entre 2.")
+        print("Un numero es par si se puede ser dividio entre 2 y tiene residuo 0.")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
         while True:
@@ -143,7 +143,7 @@ while True :
         print("")
         print("*****JUGANDO IMPARES*****")
         print("Recuerde:")
-        print("Un numero es impar si no puede ser dividio entre 2.")
+        print("Un numero es impar si no puede ser dividio entre 2 .")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
         while True:
