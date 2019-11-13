@@ -36,6 +36,8 @@ while True:
     except ValueError:
         print("Formato no aceptado.Intentelo de nuevo")
 
+# Ingresando el nombre
+
 nombre = input("Ingrese nombre por favor: ")
 print("Hola ",nombre)
 
