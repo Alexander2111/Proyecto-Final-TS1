@@ -289,6 +289,7 @@ while True :
             print(x," x ",elemento," = ",producto)
            
     elif opcion == 5:
+        print("Gracias por jugar")
         sys.exit()
     else:
         print ("Introduce un numero entre 1 y 5")
