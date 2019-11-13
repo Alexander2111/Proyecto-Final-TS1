@@ -17,7 +17,7 @@ Los temas que se presentarán en el juego serán los siguiente: "Números Pares�
   * Opción de juego de números primos
   * Opción tabla de multiplicar que se desea aprender
   * Fin del juego
-* Si el jugador es menor a 8 años se le mostrara un mensaje y se finalizara el juego, así mismo si el jugador es mayor a 13 también se le enviara un mensaje y se finalizara el juego.
+* Si el jugador es menor a 8 años o mayor a 13 años, no podra ingresar.
 * La tabla de multiplicar es un añadido para que el jugador pueda aprender (no contiene aciertos ni desaciertos)
 
 ## Integrantes
