@@ -47,8 +47,21 @@ while True :
     print("Para salir coloque la siguiente opcion:")
     print ("5. Fin de la aplicacion")
     print("")
+    while True:
+
+        try:
+            while True:
+                opcion = int(input("Ingrese una opcion para jugar:"))
+                if 0<opcion<6:
+                    break
+                else:
+                    print("Lo siento. Solo puede ingresar opciones del 1 al 5.")
+
+            
+            break
+        except ValueError:
+            print("Formato no aceptado.Intentelo de nuevo")
     
-    opcion = int(input("Ingrese una opcion para jugar:"))
  
     
  
