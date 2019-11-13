@@ -43,7 +43,8 @@ def abrir_ventana2() :
             messagebox.showinfo("Gracias","Gracias por jugar")
             ventana2.destroy()
         def yesfinal():
-            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO, Abra la ventana de nuevo")
+            ventana2.destroy()
         def nop():
             if n % 2 != 0:
                 etiquetaPares10 = Label(ventana2, text="Correcto.El numero ingresado no es par",fg="black",bg="#1887BF").place(x=250, y=310)
@@ -102,7 +103,8 @@ def abrir_ventana3():
             messagebox.showinfo("Gracias","Gracias por jugar")
             ventana3.destroy()
         def yesifinal():
-            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO, Abra la ventana de nuevo")
+            ventana3.destroy()
         def noip():
             if n % 2 == 0:
                 etiquetaPares10 = Label(ventana3, text="Correcto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
@@ -160,7 +162,8 @@ def abrir_ventana4():
             messagebox.showinfo("Gracias","Gracias por jugar")
             ventana4.destroy()
         def yesprifinal():
-            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO, Abra la ventana de nuevo")
+            ventana4.destroy()
         def nopri():
             if(a !=2):
                 etiquetaPris10 = Label(ventana4, text="Correcto.El numero no es primo",fg="black",bg="#1887BF").place(x=270, y=310)
