@@ -15,7 +15,7 @@ nombre_etiqueta = Entry(ventana, textvariable=nombre).place(x=180, y=35)
 ventana.geometry('350x300')
 ventana.title(" CHIQUIMATEANDO")
 etiqueta = Label(ventana, text="Bienvenidos a CHIQUIMATEANDO",bg="#1887BF",font=("Arial Bold",15))
-etiqueta.pack()
+etiqueta.pack() 
 ventana.config (bg="#1887BF")
 ttk.Button(ventana, text='Salir', command=ventana.destroy).pack(side=BOTTOM)
 
@@ -177,22 +177,33 @@ def abrir_ventana5():
         def multi() :
             MU.append(mul.get())
             e1 = Label (ventana5, text= str(MU[0])+" X  1  = "+  str(MU[0]),bg="#1887BF" ).place(x=280, y=190)
-            e2 = Label (ventana5, text= str(MU[0])+" X  2  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=210)
-            e3 = Label (ventana5, text= str(MU[0])+" X  3  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=230)
-            e4 = Label (ventana5, text= str(MU[0])+" X  4  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=250)
-            e5 = Label (ventana5, text= str(MU[0])+" X  5  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=270)
-            e6 = Label (ventana5, text= str(MU[0])+" X  6  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=290)
-            e7 = Label (ventana5, text= str(MU[0])+" X  7  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=310)
-            e8 = Label (ventana5, text= str(MU[0])+" X  8  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=330)
-            e9 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=350)
-            e10 = Label (ventana5, text= str(MU[0])+" X  10  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=370)
-            e11 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=390)
-            e12 = Label (ventana5, text= str(MU[0])+" X  9  = "+  (2*str(MU[0])),bg="#1887BF" ).place(x=280, y=410)
+            a2 = int(MU[0]) * 2
+            e2 = Label (ventana5, text= str(MU[0])+" X  2  = "+  str(a2),bg="#1887BF" ).place(x=280, y=210)
+            a3 = int(MU[0]) * 3
+            e3 = Label (ventana5, text= str(MU[0])+" X  3  = "+  str(a3),bg="#1887BF" ).place(x=280, y=230)
+            a4 = int(MU[0]) * 4
+            e4 = Label (ventana5, text= str(MU[0])+" X  4  = "+  str(a4),bg="#1887BF" ).place(x=280, y=250)
+            a5 = int(MU[0]) * 5
+            e5 = Label (ventana5, text= str(MU[0])+" X  5  = "+  str(a5),bg="#1887BF" ).place(x=280, y=270)
+            a6 = int(MU[0]) * 6
+            e6 = Label (ventana5, text= str(MU[0])+" X  6  = "+  str(a6),bg="#1887BF" ).place(x=280, y=290)
+            a7 = int(MU[0]) * 7
+            e7 = Label (ventana5, text= str(MU[0])+" X  7  = "+  str(a7),bg="#1887BF" ).place(x=280, y=310)
+            a8 = int(MU[0]) * 8
+            e8 = Label (ventana5, text= str(MU[0])+" X  8  = "+  str(a8),bg="#1887BF" ).place(x=280, y=330)
+            a9=  int(MU[0]) * 9
+            e9 = Label (ventana5, text= str(MU[0])+" X  9  = "+  str(a9),bg="#1887BF" ).place(x=280, y=350)
+            a10 = int(MU[0]) * 10
+            e10 = Label (ventana5, text= str(MU[0])+" X  10  = "+  str(a10),bg="#1887BF" ).place(x=280, y=370)
+            a11 = int(MU[0]) * 11
+            e11 = Label (ventana5, text= str(MU[0])+" X  11  = "+  str(a11),bg="#1887BF" ).place(x=280, y=390)
+            a12 = int(MU[0]) * 12
+            e12 = Label (ventana5, text= str(MU[0])+" X  12  = "+  str(a12),bg="#1887BF" ).place(x=280, y=410)
         #Abrir ventana
         ventana5 = Toplevel(ventana)
-        ventana.iconify
+        ventana.iconify 
         ##Diseño de la Ventana
-        ventana5.geometry('700x450')
+        ventana5.geometry('700x470')
         ventana5.title("Jugando Multiplicar")
         etiquetamultiplicar = Label(ventana5, text="Multiplicar",bg="#1887BF")
         etiquetamultiplicar.pack()
