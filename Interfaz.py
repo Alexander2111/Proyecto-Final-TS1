@@ -39,17 +39,33 @@ def abrir_ventana2() :
     if int(len(N))>=1 :
         n = random.randint(1,100)
         #Definicion de Botones Pares
+        def nofinal():
+            messagebox.showinfo("Gracias","Gracias por jugar")
+            ventana2.destroy()
+        def yesfinal():
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
         def nop():
             if n % 2 != 0:
                 etiquetaPares10 = Label(ventana2, text="Correcto.El numero ingresado no es par",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPares12 = Label(ventana2, text="Quieres seguir jugando?",fg="black",bg="#1887BF").place(x=280, y=330)
+                BotonPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonPAFNO = Button(ventana2, text="NO",command=nofinal,activebackground="blue").place(x=360, y=370)
             else:
                 etiquetaPares11 = Label(ventana2, text="Incorrecto.El numero ingresado si es par",fg="black",bg="#1887BF").place(x=250, y=310)
-            
+                etiquetaPares12 = Label(ventana2, text="Quieres seguir jugando?",fg="black",bg="#1887BF").place(x=280, y=330)
+                BotonPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonPAFNO = Button(ventana2, text="NO",command=nofinal,activebackground="blue").place(x=360, y=370)
         def yesp():           
             if n % 2 == 0:
                 etiquetaPares8 = Label(ventana2, text="Correcto.El numero ingresado es par",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPares12 = Label(ventana2, text="Quieres seguir jugando?",fg="black",bg="#1887BF").place(x=280, y=330)
+                BotonPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonPAFNO = Button(ventana2, text="NO",command=nofinal,activebackground="blue").place(x=360, y=370)
             else : 
                 etiquetapares9 = Label(ventana2, text="Incorrecto.El numero ingresado no es par",fg="black",bg="#1887BF").place(x=250, y=310)
+                etiquetaPares12 = Label(ventana2, text="Quieres seguir jugando?",fg="black",bg="#1887BF").place(x=280, y=330)
+                BotonPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonPAFNO = Button(ventana2, text="NO",command=nofinal,activebackground="blue").place(x=360, y=370)
         def pares():
             etiquetaPares6 = Label(ventana2, text="Este numero es par? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaPares7 = Label(ventana2, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
@@ -82,16 +98,29 @@ def abrir_ventana3():
     if int(len(N))>=1 :
         n = random.randint(1,100)
         #Definicion Botones Impares :
+        def noifinal():
+            messagebox.showinfo("Gracias","Gracias por jugar")
+            ventana3.destroy()
+        def yesifinal():
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
         def noip():
             if n % 2 == 0:
                 etiquetaPares10 = Label(ventana3, text="Correcto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
             else:
                 etiquetaPares11 = Label(ventana3, text="Incorrecto.El numero ingresado si es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+                BotonIPAFSI = Button(ventana2, text="SI",command=yesfinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
         def yesip():
             if n % 2 != 0:
                 etiquetaPares8 = Label(ventana3, text="Correcto.El numero ingresado es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
             else : 
                 etiquetapares9 = Label(ventana3, text="Incorrecto.El numero ingresado no es impar",fg="black",bg="#1887BF").place(x=250, y=310)
+                BotonIPAFSI = Button(ventana2, text="SI",command=yesifinal,activebackground="blue").place(x=300, y=370)
+                BotonIPAFNO = Button(ventana2, text="NO",command=noifinal,activebackground="blue").place(x=360, y=370)
         def impares():
             etiquetaIPares6 = Label(ventana3, text="Este numero es impar? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaIPares7 = Label(ventana3, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
@@ -127,21 +156,34 @@ def abrir_ventana4():
             if (n % i == 0):
                 a = a + 1
         #Definiciones
+        def noprifinal():
+            messagebox.showinfo("Gracias","Gracias por jugar")
+            ventana4.destroy()
+        def yesprifinal():
+            messagebox.showinfo("Mensaje","Sigamos CHIQUIMATENANDO")
         def nopri():
             if(a !=2):
-                etiquetaPris10 = Label(ventana4, text="Correcto.El numero no es primo",fg="black",bg="#1887BF").place(x=250, y=310)
-                etiquetaPris15 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+                etiquetaPris10 = Label(ventana4, text="Correcto.El numero no es primo",fg="black",bg="#1887BF").place(x=270, y=310)
+                etiquetaPris15 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=290, y=330)
+                BotonPRAFSI = Button(ventana4, text="SI",command=yesprifinal,activebackground="blue").place(x=300, y=370)
+                BotonPRAFNO = Button(ventana4, text="NO",command=noprifinal,activebackground="blue").place(x=360, y=370)
             else :
-                etiquetaPris11 = Label(ventana4, text="Incorrecto.El numero si es primo",fg="black",bg="#1887BF").place(x=250, y=310)
-                etiquetaPris14 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+                etiquetaPris11 = Label(ventana4, text="Incorrecto.El numero si es primo",fg="black",bg="#1887BF").place(x=270, y=310)
+                etiquetaPris14 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=290, y=330)
+                BotonPRAFSI = Button(ventana4, text="SI",command=yesprifinal,activebackground="blue").place(x=300, y=370)
+                BotonPRAFNO = Button(ventana4, text="NO",command=noprifinal,activebackground="blue").place(x=360, y=370)
         def yespri():
             if (a == 2):
-                etiquetaPris8 = Label(ventana4, text="Correcto. El numero si es primo.",fg="black",bg="#1887BF").place(x=250, y=310)
-                etiquetaPris12 = Label(ventana4, text=str(n)+"Tiene : "+str(a)+"divisores",fg="black",bg="#1887BF").place(x=250, y=330)
-                print(n, "Tiene:",a,"divisiores")
+                etiquetaPris8 = Label(ventana4, text="Correcto. El numero si es primo",fg="black",bg="#1887BF").place(x=270, y=310)
+                etiquetaPris12 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=290, y=330)
+                BotonPRAFSI = Button(ventana4, text="SI",command=yesprifinal,activebackground="blue").place(x=300, y=370)
+                BotonPRAFNO = Button(ventana4, text="NO",command=noprifinal,activebackground="blue").place(x=360, y=370)
+                #etiquetaPRI(n, "Tiene:",a,"divisiores")
             else :
-                etiquetaPris9 = Label(ventana4, text="Incorrecto. No es primo.",fg="black",bg="#1887BF").place(x=250, y=310)
-                etiquetaPris13 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=250, y=330)
+                etiquetaPris9 = Label(ventana4, text="Incorrecto. No es primo",fg="black",bg="#1887BF").place(x=270, y=310)
+                etiquetaPris13 = Label(ventana4, text=str(n)+" Tiene : "+str(a)+" divisores",fg="black",bg="#1887BF").place(x=290, y=330)
+                BotonPRAFSI = Button(ventana4, text="SI",command=yesprifinal,activebackground="blue").place(x=300, y=370)
+                BotonPRAFNO = Button(ventana4, text="NO",command=noprifinal,activebackground="blue").place(x=360, y=370)
         def primos():
             etiquetaPris6 = Label(ventana4, text="Este numero es primo? ",fg="black",bg="#1887BF").place(x=290, y=210)
             etiquetaPriss7 = Label(ventana4, text=str(n),fg="black",bg="#1887BF").place(x=330, y=240)
@@ -199,6 +241,7 @@ def abrir_ventana5():
             e11 = Label (ventana5, text= str(MU[0])+" X  11  = "+  str(a11),bg="#1887BF" ).place(x=280, y=390)
             a12 = int(MU[0]) * 12
             e12 = Label (ventana5, text= str(MU[0])+" X  12  = "+  str(a12),bg="#1887BF" ).place(x=280, y=410)
+            ttk.Button(ventana5, text='Volver al Menu', command=ventana5.destroy).pack(side=BOTTOM)
         #Abrir ventana
         ventana5 = Toplevel(ventana)
         ventana.iconify 
@@ -221,10 +264,10 @@ def abrir_ventana5():
         messagebox.showerror("Mensaje","Debe Registrar un jugador")
 
 #Interfaz Botones 
-boton1 = Button(ventana, text="Pares",command=abrir_ventana2,activebackground="#369A8E").place(x=70, y=190)
-boton2 = Button(ventana, text="Impares",command=abrir_ventana3,activebackground="#369A8E").place(x=185, y=190)
-boton3 = Button(ventana, text="Primos", command=abrir_ventana4,activebackground="#369A8E").place(x=70, y=150)
-boton4 = Button(ventana, text="Tabla de multiplicar", command=abrir_ventana5,activebackground="#369A8E").place(x=185, y=150)
-boton5 = Button(ventana, text="Ingrese su nombre", command=in_name,activebackground="#369A8E").place(x=120, y=70)
+boton1 = Button(ventana, text="Pares",command=abrir_ventana2,activebackground="blue").place(x=70, y=190)
+boton2 = Button(ventana, text="Impares",command=abrir_ventana3,activebackground="blue").place(x=185, y=190)
+boton3 = Button(ventana, text="Primos", command=abrir_ventana4,activebackground="blue").place(x=70, y=150)
+boton4 = Button(ventana, text="Tabla de multiplicar", command=abrir_ventana5,activebackground="blue").place(x=185, y=150)
+boton5 = Button(ventana, text="Ingrese su nombre", command=in_name,activebackground="blue").place(x=120, y=70)
 
 ventana.mainloop()
