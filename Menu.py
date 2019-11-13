@@ -1,4 +1,4 @@
-import os
+import os,sys
 import random
 os.system("cls")
 def pedirNumeroEntero():
@@ -289,7 +289,7 @@ while True :
             print(x," x ",elemento," = ",producto)
            
     elif opcion == 5:
-        salir = True
+        sys.exit()
     else:
         print ("Introduce un numero entre 1 y 5")
  
