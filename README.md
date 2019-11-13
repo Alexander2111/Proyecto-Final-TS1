@@ -6,7 +6,7 @@ Los temas que se presentarán en el juego serán los siguiente: "Números Pares�
 
 ## Reglas 
 * La edad para jugar es de 8 a 13 años.
-* Digitar obligatoriamente hasta que numero sabes.
+
 
 ## Contenido
 * La aplicación cuenta con las siguientes opciones:
