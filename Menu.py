@@ -15,24 +15,46 @@ def pedirNumeroEntero():
     return num
  
 salir = False
+print("Hola. Solo puedes jugar si tienes la edad de 8 a 13.")
+while True:
+
+    try:
+        while True:
+            edad = int(input("Ingrese su edad por favor:"))
+            if 7<edad <14:
+                break
+            else:
+              print("Lo siento. No cuenta con la edad para poder jugar.")
+
+        
+        break
+    except ValueError:
+        print("Formato no aceptado.Intentelo de nuevo")
+
+
+
 opcion = 0
  
 while True :
 
  
     print("Bienvenidos a Chiquimatiando")
+    print("Las opciones a jugar son las siguientes:")
     print ("1. Pares")
     print ("2. Impares ")
     print ("3. Primos ")
     print ("4. Tabla de Multiplicar")
+    print("Para salir coloque la siguiente opcion:")
     print ("5. Fin de la aplicacion")
-     
-    print ("Elige una opcion")
+    print("")
+    
     opcion = int(input("Ingrese una opcion para jugar:"))
  
     
  
     if opcion == 1:
+        print("")
+        print("*****JUGANDO PARES******")
         print("Recuerde:")
         print("Un numero es par si se puede ser dividio entre 2.")
         print("Coloque Si,si desea seguir.")
@@ -65,16 +87,32 @@ while True :
             ds = input("¿Desea seguir?:").lower()
             if (ds == "si") :
                 print("Continue.")
-                
-            if (ds != "no"):
-                print("Formato no aceptado. Solo puede ingresar si o no.")
+            
             elif (ds == "no"):
                 print("Gracias por jugar pares.")
                 break
+            con = ""
+            while (ds != "no"and ds!="si") :
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+                print("Por favor intentelo de nuevo")
+                print("")
+                con = input("¿Desea seguir?:").lower()
+                
+                if con == "si" or con =="no":
+                    break
+            if (con == "si") :
+                print("Continue.")
+            
+            elif (con == "no"):
+                print("Gracias por jugar pares.")
+                break
+          
             
 
 
     elif opcion == 2:
+        print("")
+        print("*****JUGANDO IMPARES*****")
         print("Recuerde:")
         print("Un numero es impar si no puede ser dividio entre 2.")
         print("Coloque Si,si desea seguir.")
@@ -108,11 +146,24 @@ while True :
             ds = input("¿Desea seguir?:").lower()
             if (ds == "si") :
                 print("Continue.")
-                
-            elif (ds != "no"):
-                print("Formato no aceptado. Solo puede ingresar si o no.")
+            
             elif (ds == "no"):
-                print("Gracias por jugar impares.")
+                print("Gracias por jugar pares.")
+                break
+            con = ""
+            while (ds != "no"and ds!="si") :
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+                print("Por favor intentelo de nuevo")
+                print("")
+                con = input("¿Desea seguir?:").lower()
+                
+                if con == "si" or con =="no":
+                    break
+            if (con == "si") :
+                print("Continue.")
+            
+            elif (con == "no"):
+                print("Gracias por jugar pares.")
                 break
         
 
@@ -121,6 +172,8 @@ while True :
 
 
     elif opcion == 3:
+        print("")
+        print("*****JUGANDO PRIMOS*****")
         print("Recuerde:")
         print("Un numero es primo si el numero solo es divisible entre 1 y en el mismo numero.(Solo tiene 2 divisores.)")
         print("Coloque Si , si desea seguir. ")
@@ -171,11 +224,24 @@ while True :
             ds = input("¿Desea seguir?:").lower()
             if (ds == "si") :
                 print("Continue.")
-                
-            elif (ds != "no"):
-                print("Formato no aceptado. Solo puede ingresar si o no.")
+            
             elif (ds == "no"):
-                print("Gracias por jugar primos")
+                print("Gracias por jugar pares.")
+                break
+            con = ""
+            while (ds != "no"and ds!="si") :
+                print("Formato no aceptado. Solo puede ingresar si o no.")
+                print("Por favor intentelo de nuevo")
+                print("")
+                con = input("¿Desea seguir?:").lower()
+                
+                if con == "si" or con =="no":
+                    break
+            if (con == "si") :
+                print("Continue.")
+            
+            elif (con == "no"):
+                print("Gracias por jugar pares.")
                 break
             
 
