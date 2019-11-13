@@ -15,6 +15,9 @@ def pedirNumeroEntero():
     return num
  
 salir = False
+
+# Entrada:ingresar la edad
+
 print("Hola. Solo puedes jugar si tienes la edad de 8 a 13.")
 while True:
 
@@ -33,12 +36,14 @@ while True:
 
 
 
+
+# Entrando al juego 
+
 opcion = 0
- 
 while True :
 
  
-    print("Bienvenidos a Chiquimatiando")
+    print("*******Bienvenidos a Chiquimatiando*********")
     print("Las opciones a jugar son las siguientes:")
     print ("1. Pares")
     print ("2. Impares ")
@@ -64,7 +69,8 @@ while True :
     
  
     
- 
+# Pares 
+
     if opcion == 1:
         print("")
         print("*****JUGANDO PARES******")
@@ -124,6 +130,7 @@ while True :
           
             
 
+# Impares
 
     elif opcion == 2:
         print("")
@@ -187,6 +194,7 @@ while True :
 
 
 
+# Primos
 
     elif opcion == 3:
         print("")
@@ -264,6 +272,7 @@ while True :
                 break
             
 
+# Tablas de multiplicar
 
     elif opcion == 4:
         x = int(input("Ingrese que tabla desea aprender"))
