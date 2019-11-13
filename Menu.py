@@ -25,7 +25,7 @@ while True:
 
     try:
         while True:
-            edad = int(input("Ingrese su edad por favor:"))
+            edad = int(input("Ingrese su edad por favor : "))
             if 7<edad <14:
                 break
             else:
@@ -38,7 +38,7 @@ while True:
 
 # Ingresando el nombre
 
-nombre = input("Ingrese nombre por favor: ")
+nombre = input("Ingrese nombre por favor : ")
 print("Hola ",nombre)
 
 
@@ -51,7 +51,7 @@ while True :
 
  
     print("*******Bienvenidos a Chiquimatiando*********")
-    print("Las opciones a jugar son las siguientes:")
+    print("Las opciones a jugar son las siguientes : ")
     print ("1. Pares")
     print ("2. Impares ")
     print ("3. Primos ")
@@ -63,7 +63,7 @@ while True :
 
         try:
             while True:
-                opcion = int(input("Ingrese una opcion para jugar:"))
+                opcion = int(input("Ingrese una opcion para jugar : "))
                 if 0<opcion<6:
                     break
                 else:
@@ -81,14 +81,14 @@ while True :
     if opcion == 1:
         print("")
         print("*****JUGANDO PARES******")
-        print("Recuerde:")
+        print("Recuerde :")
         print("Un numero es par si se puede ser dividio entre 2.")
         print("Coloque Si,si desea seguir.")
         print("Coloque No,si desea acabar.")
         while True:
             n = random.randint(1,100)    
             while True:
-                p = input("¿El numero "+ str(n) +" es par?:").lower()
+                p = input("¿El numero "+ str(n) +" es par? : ").lower()
                 if n % 2 == 0:
                     if (p == "si"):
                         print("Correcto.El numero ingresado es par")
@@ -253,7 +253,7 @@ while True :
 
     
             
-            ds = input("¿Desea seguir?:").lower()
+            ds = input("¿Desea seguir? : ").lower()
             if (ds == "si") :
                 print("Continue.")
             
@@ -282,7 +282,7 @@ while True :
 # Tablas de multiplicar
 
     elif opcion == 4:
-        x = int(input("Ingrese que tabla desea aprender"))
+        x = int(input("Ingrese que tabla desea aprender : "))
         rango=range(1,13)
         for elemento in rango:
             producto = x*elemento
